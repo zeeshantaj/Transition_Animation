@@ -1,0 +1,25 @@
+//xml code
+android:transitionName="example_transition"
+
+// from 
+ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation((Activity) v.getContext(),
+                        holder.imageUrl, 
+                        ViewCompat.getTransitionName(holder.imageUrl));
+  Fade fade = new Fade();
+        View decor = getWindow().getDecorView();
+        fade.excludeTarget(decor.findViewById(androidx.appcompat.R.id.action_bar_container), false);
+        fade.excludeTarget(android.R.id.statusBarBackground, true);
+        fade.excludeTarget(android.R.id.navigationBarBackground, true);
+
+        getWindow().setEnterTransition(fade);
+        getWindow().setExitTransition(fade);
+
+//to 
+  Fade fade = new Fade();
+        View decor = getWindow().getDecorView();
+        fade.excludeTarget(decor.findViewById(androidx.appcompat.R.id.action_bar_container), false);
+        fade.excludeTarget(android.R.id.statusBarBackground, true);
+        fade.excludeTarget(android.R.id.navigationBarBackground, true);
+
+        getWindow().setEnterTransition(fade);
+        getWindow().setExitTransition(fade);
